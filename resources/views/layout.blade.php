@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<div class="app d-flex flex-column h-screen bg-dark">
+	<div class="app d-flex flex-column h-screen justify-content-between">
 
 		<header>
 			@include('partials/nav')
@@ -24,12 +24,12 @@
 
 		</header>
 
-		<main>
+		<main class="py-4">
 			@yield('content')
 
 		</main>
 
-		<footer>
+		<footer class="bg-white text-black-50 text-center py-3 shadow">
 			{{config('app.name')}} | Copyright @ {{ date('Y') }}
 
 		</footer>

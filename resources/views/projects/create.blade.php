@@ -5,28 +5,26 @@
 @endsection
 
 @section('content')
-	<h1>Crear Nuevo Formulario</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-10 col-lg-6 mx-auto">
+				
+				
 
-	<style type="text/css">
-		label12{
-			color: green;
-			font-style: bold;
-			font-size: 20;
-			font:20;
-			font-weight: bold;
-
-		}
-	</style>
+				@include('partials.validation-errors')
 
 
-	@include('partials.validation-errors')
+				<form class="bg-white py-3 px-4 shadow-sm rounded" 
+					method="POST" 
+					action="{{route('projects.store', $project) }}">
 
+					<h1 class="display-4">Crear Nuevo Proyecto</h1>
+					<hr>
 
-	<form method="POST" action="{{route('projects.store', $project) }}">
-
-
-		@include('partials._form', ['btnText' => 'Crear'])
-		
-	</form>
-
+					@include('partials._form', ['btnText' => 'Crear'])
+					
+				</form>
+			</div>
+		</div>
+	</div>
 @endsection
